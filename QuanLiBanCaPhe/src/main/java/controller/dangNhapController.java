@@ -57,12 +57,12 @@ public class dangNhapController extends HttpServlet {
 						} else if (tkbo.getTenChucVu(manv).equals("admin")) {
 							response.sendRedirect("GiaoDienChinh_admin");
 						}
-					} else if (!matkhau.equals(tk.getMatKhau()) || !tendn.equals(tk.getTenDangNhap())) {
-						check = 0;					
+					} else {
+						check = 0;
 					}
 				}
 			}
-			
+
 			request.setAttribute("dnsai", check);
 			RequestDispatcher rd = request.getRequestDispatcher("./view/DangNhap.jsp");
 			rd.forward(request, response);
