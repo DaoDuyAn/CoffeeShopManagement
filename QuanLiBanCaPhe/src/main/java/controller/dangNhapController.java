@@ -51,6 +51,7 @@ public class dangNhapController extends HttpServlet {
 						String manv = tk.getMaNhanVien();
 						session.setAttribute("tendn", tendn);
 						session.setAttribute("manv", manv);
+						
 						// Hiển thị giao diện theo chức vụ
 						if (tkbo.getTenChucVu(manv).equals("nhân viên")) {
 							response.sendRedirect("hienThiMenuController");
